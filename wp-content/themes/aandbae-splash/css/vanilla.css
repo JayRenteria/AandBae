@@ -1,0 +1,127 @@
+/********************************************
+* Utilities classes
+********************************************/
+
+
+.even-margin {
+  width: 90%;
+  margin: auto;
+}
+
+.mt0 {
+  margin: 0 !important;
+}
+
+.mt5 {
+  margin-top: 5px !important;
+
+}
+
+.mt10 {
+  margin-top: 10px !important;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+
+.mt25 {
+  margin-top: 25px !important;
+
+}
+
+.mt30 {
+  margin-top: 30px !important;
+}
+
+.mt40 {
+  margin-top: 40px !important;
+}
+
+.mt60 {
+  margin-top: 60px !important;
+}
+
+.mt80 {
+  margin-top: 80px !important;
+}
+
+.mb10 {
+  margin-bottom: 20px;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+.mb60 {
+  margin-bottom: 60px;
+}
+
+.mb80 {
+  margin-bottom: 80px;
+}
+
+.ml1 {
+  margin-left: 1em !important;
+}
+
+/* sometimes I hate bootstrap... :( */
+.ml2 {
+  margin-left: 2em !important;
+}
+
+.mrn1 {
+  margin-right: -1em !important;
+}
+
+.mln1 {
+  margin-left: -1em !important;
+}
+
+.child-pad0 [class^=col-] {
+  padding: 0;
+}
+
+.pr0 {
+  padding-right: 0;
+}
+
+.pl0 {
+  padding-left: 0;
+}
+
+.push-right {
+  float: right;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.iblock {
+  display: inline-block !important;
+}
+
+
+
