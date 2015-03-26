@@ -98,11 +98,13 @@ wp-content/*
 #############
 #############
 # specific about aandbae
-wp-content/themes/aandbae/.idea
-wp-content/themes/aandbae/glyphicons-*
-wp-content/themes/aandbae/js/npm.*
-wp-content/themes/aandbae/js/bootstrap-*
-wp-content/themes/aandbae/js/bootstrap.*
+wp-content/themes/aandbae-splash/.idea
+wp-content/themes/aandbae-splash/glyphicons-*
+wp-content/themes/aandbae-splash/js/npm.*
+wp-content/themes/aandbae-splash/js/bootstrap-*
+wp-content/themes/aandbae-splash/js/bootstrap.*
+wp-content/themes/aandbae-splash/Icon
+wp-content/themes/aandbae-splash/css/Icon
 wp-content/themes/twentyfourteen-child/
 wp-content/plugins
 #############
