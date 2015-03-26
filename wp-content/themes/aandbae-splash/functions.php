@@ -60,5 +60,15 @@ function aandbae_create_widget( $name, $id, $before_widget, $after_widget, $befo
 
 	register_sidebar( $args );
 }
+
+// top images
+aandbae_create_widget( 'Main Left Image', 'main-left-image', '', '', '', '', 'Widget for changing the Main Left Image.');
+aandbae_create_widget( 'Main Middle Image', 'main-middle-image', '', '', '', '', 'Widget for changing the Main Middle Image.');
+aandbae_create_widget( 'Main Right Image', 'main-right-image', '', '', '', '', 'Widget for changing the Main Right Image.');
+
+// artists photos
+aandbae_create_widget( 'Left Artist Photo', 'left-artist-photo', '', '', '', '', 'Widget for changing the Artist on the left.');
+aandbae_create_widget( 'Right Artist Photo', 'left-artist-photo', '', '', '', '', 'Widget for changing the Artist on the right.');
+
 // change main text
 aandbae_create_widget( 'Main Text', 'main-text', '', '', '', '', 'Widget for changing the Main Text.');
