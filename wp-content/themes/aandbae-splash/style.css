@@ -2,7 +2,7 @@
 Theme Name: AandBae-Splash
 Theme URI: http://aandbae.com
 Description: Artist Twin Portfolio Splash
-Author: Florian Goussin
+Author: hermesdevelopment
 Author URI: http://hermesdevelopment.com
 Version: 1.0
 Tags: portfolio, artist, craft
@@ -10,3 +10,30 @@ Tags: portfolio, artist, craft
 License: © Copyright 2014 Hermes Development. All Rights Reserved.
 License URI: none
 */
+
+/********************************************
+* Fonts
+********************************************/
+@font-face {
+	font-family: 'ArchitectsDaughter';
+	src: url("fonts/ArchitectsDaughter.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Biko';
+	src: url('fonts/Biko_Regular.woff');
+}
+
+/********************************************
+* styling
+********************************************/
+h1 {
+	font-family: 'ArchitectsDaughter';
+	font-size: 3em;
+}
+
+@media screen and (min-width: 768px) {
+	h1 {
+		font-size: 5em;
+	}
+}

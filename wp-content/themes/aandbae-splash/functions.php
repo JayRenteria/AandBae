@@ -4,22 +4,10 @@
 update_option('siteurl','http://aandbae.com');
 update_option('home','http://aandbae.com');
 
-
-/**
- * load the css files
- */
-function aandbae_load_css() {
-	wp_enqueue_style('bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
-	wp_enqueue_style('vanilla_css', get_template_directory_uri() . '/css/vanilla.css');
-	wp_enqueue_style('main_css', get_template_directory_uri() . 'css/main.css');
-}
-add_action('wp_enqueue_scripts', 'aandbae_load_css');
-
-
 /**
  * load the js files
  */
-function aandbae_load_js() {
+function aandbaeSplash_load_js() {
 
 	// old browsers compatibility
 	global $wp_scripts;
@@ -28,25 +16,37 @@ function aandbae_load_js() {
 	$wp_scripts->add_data('html5_shiv', 'conditional', 'lt IE 9');
 	$wp_scripts->add_data('respond_js', 'conditional', 'lt IE 9');
 
-	wp_enqueue_script('bootstrap_js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '3', true);
+	wp_register_script('bootstrap_js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '3', true);
+	wp_enqueue_script('bootstrap_js');
 }
-add_action('wp_enqueue_scripts', 'aandbae_load_js');
+add_action('wp_enqueue_scripts', 'aandbaeSplash_load_js');
+
+
+/**
+ * load the css files
+ */
+function aandbaeSplash_load_css() {
+	wp_enqueue_style('bootstrap_css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
+	wp_enqueue_style('vanilla_css', get_template_directory_uri() . '/css/vanilla.css');
+	wp_enqueue_style('main_css', get_template_directory_uri() . '/style.css');
+}
+add_action('wp_enqueue_scripts', 'aandbaeSplash_load_css');
 
 /**
  * remove the admin Word Press bar
  */
-function aandbae_remove_admin_bar() {
-	if (!current_user_can('administrator') && !is_admin()) {
-		show_admin_bar(false);
-	}
-}
-add_action('after_setup_theme', 'aandbae_remove_admin_bar');
+ function aandbaeSplash_remove_admin_bar() {
+   if (!current_user_can('administrator') && !is_admin()) {
+     show_admin_bar(false);
+   }
+ }
+ add_action('after_setup_theme', 'aandbaeSplash_remove_admin_bar');
 
 
 /*
  * Widget creation
  */
-function aandbae_create_widget( $name, $id, $before_widget, $after_widget, $before_title, $after_title, $description ) {
+function aandbaeSplash_create_widget( $name, $id, $before_widget, $after_widget, $before_title, $after_title, $description ) {
 
 	$args = array(
 		'name'          => __( $name ),
@@ -62,13 +62,15 @@ function aandbae_create_widget( $name, $id, $before_widget, $after_widget, $befo
 }
 
 // top images
-aandbae_create_widget( 'Main Left Image', 'main-left-image', '', '', '', '', 'Widget for changing the Main Left Image.');
-aandbae_create_widget( 'Main Middle Image', 'main-middle-image', '', '', '', '', 'Widget for changing the Main Middle Image.');
-aandbae_create_widget( 'Main Right Image', 'main-right-image', '', '', '', '', 'Widget for changing the Main Right Image.');
+aandbaeSplash_create_widget( 'Main Left Image', 'main-left-image', '', '', '', '', 'Widget for changing the Main Left Image.');
+aandbaeSplash_create_widget( 'Main Middle Image', 'main-middle-image', '', '', '', '', 'Widget for changing the Main Middle Image.');
+aandbaeSplash_create_widget( 'Main Right Image', 'main-right-image', '', '', '', '', 'Widget for changing the Main Right Image.');
 
 // artists photos
-aandbae_create_widget( 'Left Artist Photo', 'left-artist-photo', '', '', '', '', 'Widget for changing the Artist on the left.');
-aandbae_create_widget( 'Right Artist Photo', 'left-artist-photo', '', '', '', '', 'Widget for changing the Artist on the right.');
+aandbaeSplash_create_widget( 'Left Artist Photo', 'left-artist-photo', '', '', '', '', 'Widget for changing the Artist on the left.');
+aandbaeSplash_create_widget( 'Right Artist Photo', 'right-artist-photo', '', '', '', '', 'Widget for changing the Artist on the right.');
 
 // change main text
-aandbae_create_widget( 'Main Text', 'main-text', '', '', '', '', 'Widget for changing the Main Text.');
+aandbaeSplash_create_widget( 'Main Text', 'main-text', '', '', '', '', 'Widget for changing the Main Text.');
+
+?>
